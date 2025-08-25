@@ -1,0 +1,131 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug AES Example",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/aes_example",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "DYLD_LIBRARY_PATH",
+                    "value": "${workspaceFolder}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value run-target",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build AES Example (Debug)"
+        },
+        {
+            "name": "Debug Hash Example",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/hash_example",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "DYLD_LIBRARY_PATH",
+                    "value": "${workspaceFolder}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value run-target",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Hash Example (Debug)"
+        },
+        {
+            "name": "Debug AES CBC Example",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/aes_cbc_example",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "DYLD_LIBRARY_PATH",
+                    "value": "${workspaceFolder}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value run-target",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build AES CBC Example (Debug)"
+        },
+        {
+            "name": "Debug Current Example",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}_example",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "DYLD_LIBRARY_PATH",
+                    "value": "${workspaceFolder}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value run-target",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Current Example (Debug)"
+        },
+        {
+            "name": "Debug Botan Tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/botan-test",
+            "args": [
+                "--test-threads=1"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "DYLD_LIBRARY_PATH",
+                    "value": "${workspaceFolder}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value run-target",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/build/include/public",
+                "${workspaceFolder}/build/include/public/botan",
+                "${workspaceFolder}/src/lib/**",
+                "/usr/local/include",
+                "/opt/homebrew/include",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/*/include",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+            ],
+            "defines": [
+                "BOTAN_DLL=",
+                "_REENTRANT",
+                "BOTAN_TARGET_OS_IS_DARWIN",
+                "BOTAN_TARGET_ARCH_IS_X86_64"
+            ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang++",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "macos-clang-x64",
+            "compilerArgs": [
+                "-fstack-protector",
+                "-pthread",
+                "-stdlib=libc++",
+                "-fPIC",
+                "-fvisibility=hidden"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/build/include/public",
+                    "${workspaceFolder}/src",
+                    "/usr/local/include",
+                    "/opt/homebrew/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        }
+    ]
+}

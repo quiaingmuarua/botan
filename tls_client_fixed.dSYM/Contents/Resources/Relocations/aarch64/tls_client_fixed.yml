@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     tls_client_fixed
+relocations:     []
+...

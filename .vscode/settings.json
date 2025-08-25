@@ -1,0 +1,39 @@
+{
+    "files.associations": {
+        "*.h": "cpp",
+        "*.hpp": "cpp",
+        "*.cpp": "cpp",
+        "*.c": "c"
+    },
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "C_Cpp.default.intelliSenseMode": "macos-clang-x64",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.autocomplete": "default",
+    "C_Cpp.formatting": "vcFormat",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "terminal.integrated.env.osx": {
+        "DYLD_LIBRARY_PATH": "${workspaceFolder}"
+    },
+    "cmake.configureOnOpen": false,
+    "search.exclude": {
+        "**/build/**": true,
+        "**/obj/**": true,
+        "**/.cache/**": true,
+        "**/*.o": true,
+        "**/*.so": true,
+        "**/*.dylib": true,
+        "**/*.a": true
+    },
+    "files.exclude": {
+        "**/.cache": true,
+        "**/build/obj": true
+    }
+}

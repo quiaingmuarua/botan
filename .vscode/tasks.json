@@ -1,0 +1,168 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build AES Example (Debug)",
+            "group": "build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++20",
+                "-g",
+                "-O0",
+                "-DDEBUG",
+                "-I${workspaceFolder}/build/include/public",
+                "-L${workspaceFolder}",
+                "-lbotan-3",
+                "${workspaceFolder}/src/examples/aes.cpp",
+                "-o",
+                "${workspaceFolder}/aes_example"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build Hash Example (Debug)",
+            "group": "build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++20",
+                "-g",
+                "-O0",
+                "-DDEBUG",
+                "-I${workspaceFolder}/build/include/public",
+                "-L${workspaceFolder}",
+                "-lbotan-3",
+                "${workspaceFolder}/src/examples/hash.cpp",
+                "-o",
+                "${workspaceFolder}/hash_example"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build AES CBC Example (Debug)",
+            "group": "build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++20",
+                "-g",
+                "-O0",
+                "-DDEBUG",
+                "-I${workspaceFolder}/build/include/public",
+                "-L${workspaceFolder}",
+                "-lbotan-3",
+                "${workspaceFolder}/src/examples/aes_cbc.cpp",
+                "-o",
+                "${workspaceFolder}/aes_cbc_example"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build Current Example (Debug)",
+            "group": "build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++20",
+                "-g",
+                "-O0",
+                "-DDEBUG",
+                "-I${workspaceFolder}/build/include/public",
+                "-L${workspaceFolder}",
+                "-lbotan-3",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/${fileBasenameNoExtension}_example"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build Example with Script (Debug)",
+            "group": "build",
+            "type": "shell",
+            "command": "${workspaceFolder}/build_example.sh",
+            "args": [
+                "${fileBasenameNoExtension}",
+                "-c",
+                "-v"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build and Run Current Example",
+            "group": "build",
+            "type": "shell",
+            "command": "${workspaceFolder}/build_example.sh",
+            "args": [
+                "${fileBasenameNoExtension}"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Configure Botan (Debug)",
+            "detail": "Configure Botan for debugging",
+            "group": "build",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "./configure.py",
+                "--debug-mode",
+                "--build-targets=shared,static,cli,tests",
+                "--with-zlib",
+                "--with-bzip2"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            }
+        },
+        {
+            "label": "Build All (macOS)",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-j",
+                "$(sysctl -n hw.logicalcpu)"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "close": false
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
