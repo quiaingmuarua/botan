@@ -102,3 +102,6 @@ callgrind.*
 
 # cscope
 cscope.out
+*.dSYM/
+*._debug
+*._example
